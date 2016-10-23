@@ -46,8 +46,49 @@
   Right now when you work on your master branch, someone might push some updates to the remote repository, as long as you do 
   not connect to the remote repository, your origin/master will not move.  
   To synchronize the work, you can use **git fetch origin**
+
+ 
+ 
+* We can also have multiple remote servers, to add another remote server, we can use **git remote add name URL**.  
+  Then you can run **git fetch name** to only fetch the code from that branch, and there will be another pointer pointing to   the commit the new branch has.  
+  ![](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/3.5%20remote%20tracking%20branch.png)  
   
- 
- 
+  
+  
+* We can push our local branch to remote to work with others by run **git push remotename branchname**, also if we want to     change the branch name on the remote, we can run **git push origin name:newName**.  
+  After the push, when someone fetches it from the server, he will not automatically have local copy of them. Instead, he       will only have a pointer that can't be modified.  
+  If you want to merge that work into the current branch, you can run **git merge origin/newbranch**. Or, **git checkout -b     name origin/newbranch** could be used to give you a local branch that starts where origin/newbranch is.
+  
+  
+  
+* Tracking branch is the local branch that has a direct relationship to a remote branch; upstream branch is the branch it       tracks. Running **git checkout -b [branch] [remoteName]/[branch]** will switch to the new branch and track it from origin.   If you already have a local branch and you want to set it to a a remote branch or change the upstream branch, you can use     **git branch -u/--set-upstream-to origin/branchName** to set up the branch to track remote branch branchName from origin.  
+
+
+
+* **git branch -vv** could be used if you want to see what tracking branches you have set up, and if your local branch is       ahead, behind or both. Then if you want to update all the branches, you can run **git fetch --all**.   
+
+
+
+* **git fetch** will fetch down all the changes but will not modify your work directory, which means you need to merge it       yourself. While **git ** will do **git fetch** and **git merge**.   
+
+
+
+
+* **git push origin --delete branchName** will delete the branch from the server. Basically all it does is to remove the       pointer from the server. The git server will keep the data until a garbage collection runs.   
+
+
+
+###3.6 Rebasing   
+
+
+
+* **git rebase** is another way to integrate changes from one branch into another other than **git merge**.   
+  **In the case below, if we run **git checkout experiment** and **git rebase master**:   
+  ![](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/3.6%20rebase.png)  
+  After that, you can do **git checkout master** and **git merge experiment** to do a fast-forward merge.   \
+  Actually, the endpoint of rebase and merge is totally the same, the only difference is the history. Rebasing replays         changes from one line of work onto another in the order they were introduced, whereas merging takes the endpoints and         merges them together.   
+  
+  
+  
 * 
   
