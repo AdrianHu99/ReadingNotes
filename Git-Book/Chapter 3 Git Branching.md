@@ -61,7 +61,7 @@
   
   
   
-* Tracking branch is the local branch that has a direct relationship to a remote branch; upstream branch is the branch it       tracks. Running **git checkout -b [branch] [remoteName]/[branch]** will switch to the new branch and track it from origin.   If you already have a local branch and you want to set it to a a remote branch or change the upstream branch, you can use     **git branch -u/--set-upstream-to origin/branchName** to set up the branch to track remote branch branchName from origin.  
+* Tracking branch is the local branch that has a direct relationship to a remote branch; upstream branch is the branch it     tracks. Running **git checkout -b [branch] [remoteName]/[branch]** will switch to the new branch and track it from origin.   If you already have a local branch and you want to set it to a a remote branch or change the upstream branch, you can use   **git branch -u/--set-upstream-to origin/branchName** to set up the branch to track remote branch branchName from           origin.  
 
 
 
@@ -85,10 +85,23 @@
 * **git rebase** is another way to integrate changes from one branch into another other than **git merge**.   
   **In the case below, if we run **git checkout experiment** and **git rebase master**:   
   ![](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/3.6%20rebase.png)  
-  After that, you can do **git checkout master** and **git merge experiment** to do a fast-forward merge.   \
+  After that, you can do **git checkout master** and **git merge experiment** to do a fast-forward merge.   
   Actually, the endpoint of rebase and merge is totally the same, the only difference is the history. Rebasing replays         changes from one line of work onto another in the order they were introduced, whereas merging takes the endpoints and         merges them together.   
   
   
   
-* 
+* Another example, if you have three branches with a topic branch off another topic branch as the picture below shows:   
+  ![](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/3.6%20a%20topic%20branch%20off%20another%20topic%20branch.png)
+  Then you decide to merge the client-side changes into the mainline. What you can do is by running **git rebase --onto         master server client**. This will merge the difference between **client** and the common ancestor of **client** and           **server** branch. As the picture below shows:   
+  ![](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/3.6%20rebase%20a%20topic%20branch%20off%20another%20topic%20branch.png)
+  Basically the format is **git rebase [baseBranch] [topicBranch]**    
+  The way to remove the branch is by running **git branch -d [branchName]**    
+  
+  
+  
+* To avoid something bad happens, we should always use **git pull --rebase**.   
+  Remember: If you treat rebasing as a way to clean up and work with commits before you push them, and if you only rebase     commits that have never been available publicly, then you’ll be fine. If you rebase commits that have already been pushed   publicly, and people may have based work on those commits, then you may be in for some frustrating trouble.    
+  
+  
+  
   
