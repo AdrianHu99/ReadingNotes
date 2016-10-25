@@ -12,7 +12,7 @@
 
 * **git checkout -b name** is equal to **git branch name** plus **git checkout name**.  
   Three way merge:  
-  ![three way merge](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/3.2-Three-way-merge.png)  
+  ![three way merge](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/3.2-Three-way-merge.png)
 
 
 
