@@ -4,18 +4,18 @@
   1. The cursor is moved using either the arrow keys or the hjkl keys.  
          h (left)       j (down)       k (up)       l (right)  
 
-  2. To start Vim from the shell prompt type:  vim FILENAME <ENTER>  
+  2. To start Vim from the shell prompt type:  vim FILENAME (ENTER)  
 
-  3. To exit Vim type:     <ESC>   :q!   <ENTER>  to trash all changes.  
-             OR type:      <ESC>   :wq   <ENTER>  to save the changes.  
+  3. To exit Vim type:     (ESC)   :q!   (ENTER)  to trash all changes.  
+             OR type:      (ESC)   :wq   (ENTER)  to save the changes.  
 
   4. To delete the character at the cursor type:  x  
 
   5. To insert or append text type:  
-         i   type inserted text   <ESC>         insert before the cursor  
-         A   type appended text   <ESC>         append after the line  
+         i   type inserted text   (ESC)         insert before the cursor  
+         A   type appended text   (ESC)         append after the line  
 
-NOTE: Pressing <ESC> will place you in Normal mode or will cancel  
+NOTE: Pressing (ESC) will place you in Normal mode or will cancel  
       an unwanted and partially completed command.  
 
 
@@ -128,7 +128,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
   4. The  y  operator yanks (copies) text,  p  puts (pastes) it.
 
-  5. Typing a capital  R  enters Replace mode until  <ESC>  is pressed.
+  5. Typing a capital  R  enters Replace mode until  (ESC)  is pressed.
 
   6. Typing ":set xxx" sets the option "xxx".  Some options are:
         'ic' 'ignorecase'       ignore upper/lower case when searching
@@ -137,3 +137,20 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      You can either use the long or the short option name.
 
   7. Prepend "no" to switch an option off:   :set noic
+
+
+
+# Lesson 7 SUMMARY
+
+
+  1. Type  :help  or press (F1) or (HELP)  to open a help window.  
+
+  2. Type  :help cmd  to find help on  cmd .  
+
+  3. Type  CTRL-W CTRL-W  to jump to another window  
+
+  4. Type  :q  to close the help window  
+
+  5. Create a vimrc startup script to keep your preferred settings.  
+
+  6. When typing a  :  command, press CTRL-D to see possible completions. Press (TAB) to use one completion.  
