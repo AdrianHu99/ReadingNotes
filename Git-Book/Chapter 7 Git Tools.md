@@ -29,3 +29,47 @@
   
 
 * **git log --left-right refA...refB** uses three dots to show all the non-common commits and the side of the range each commit is in.  
+
+
+
+### 7.2 Interactive Staging
+
+* **git add -i** can give you much more information of the files that are staged or not staged. You will have much more choices for       those files, as below shows: 
+
+        $ git add -i
+           staged     unstaged path
+        1:    unchanged        +0/-1 TODO
+        2:    unchanged        +1/-1 index.html
+        3:    unchanged        +5/-1 lib/simplegit.rb
+
+        *** Commands ***
+          1: status     2: update      3: revert     4: add untracked
+          5: patch      6: diff        7: quit       8: help
+        What now>  
+        
+        
+
+### 7.3 Stashing and Cleaning
+
+* **git stash** takes the dirty state of your working directory – that is, your modified tracked files and staged changes – and saves it on a stack of unfinished changes that you can reapply at any time.  
+  **git stash apply** or more specifically, **git stash apply stash@{2}** help you reapply the changes you stashed. But it will reapply the changes not the files that are staged. If you want to reapply exactly to the original position, you need to use **git stash apply --index** instead.  
+  **git stash drop** will remove the stash and **git stash pop** will apply the stash and drop it from your stack.  
+  **git stash --keep-index** will not stash anything that is already staged.  
+  **git stash --patch** will work similar to **git add -p**.  
+  
+  
+  
+* If you have already worked on the branch for a while, you may get a confilict when you want to reapply the stashed work. In that case, you can run **git stash branch** which will create a new branch for you.  
+  Be careful about **git clean**, you can run it with **-n** to double check or with **-i** to run it in an interactive mode. **-f** is force, **-x** is to remove any file matching the pattern in **.gitignore**.  
+  
+  
+  
+### 7.4 Signing Your Work (Security)
+
+
+
+### 7.5 Searching
+
+
+
+* **git grep
