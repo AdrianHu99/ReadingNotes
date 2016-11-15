@@ -72,4 +72,50 @@
 
 
 
-* **git grep
+* **git grep -n word** will look through the files in your working directory. **-n** is to print out the line numbers where Git found matches.  
+  **--count** would help you summarize the output by just showing the matched files and how many matches.  
+  By passing **-p**, it will show what method or function having that match.  
+  If we want to see every change made to a certain function in a file, we can run **git log -L :function_name:file_name**. This will try to figure out what the bounds of that function are and then look through the history and show us every change that was made to the function as a series of patches back to when the function was first created.  
+  
+  
+  
+### 7.6 Rewriting History
+
+* **git commit --amend** would help you only modify the last commit message.  
+  **git rebase -i HEAD~n** helps you change edit the last n commits. Notice that this will give you the reverse order. You can also remove a commit by doing this, just cancel that line.  
+  You can also squash and split the commit.  
+  **git filter-branch** is a tool which lets you scrub the entire history.  
+  
+  
+  
+### 7.7 Reset Demystified
+
+* The work flow
+  ![](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/7.7%20The%20Workflow.PNG)  
+  HEAD is the last commit snapshot.  
+  Index is the proposed next commit snapshot.  
+  Working directory is the Sandbox.  
+  
+  
+  
+* **git reset --soft HEAD~** will move the branch HEAD points to.  
+  **git reset [--mixed] HEAD~** will make the index look like HEAD.  
+  **git reset --hard HEAD~** will make the working directory look like the index.  
+  **git reset filename** is same as **git reset --mixed HEAD filename.txt** which will: 
+      
+      1. Move the branch HEAD points to (skipped)
+      2. Make the index look like HEAD (stop here).
+      Which is just unstaging the file. 
+      
+      
+
+* Also if you have 3 commits, you can squash them by **git reset --soft HEAD~2** and then **git commit**, which will squash the middle commit.  
+  
+
+
+* The difference between reset and checkout
+  ![The difference between reset and checkout](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/7.7%20The%20Difference%20between%20reset%20and%20checkout.PNG)  
+
+
+* Cheatsheet of reset and checkout
+  ![Cheatsheet of reset and checkout](https://github.com/adrrrrrrrian/ReadingNotes/blob/master/Git-Book/7.7%20Cheatsheet%20of%20reset%20and%20checkout.PNG)
