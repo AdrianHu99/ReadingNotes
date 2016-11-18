@@ -1,1 +1,16 @@
 
+
+
+
+
+### Standard Java exceptions
+
+
+
+* **Throwable** includes two general types, one is **Error** and the other is **Exception**.   
+  **Exception** is the basic type thrown by any method and your own methods or runtime accidents.  
+  **Error* represents compile-time and system errors, usually you don't worry about catching them.  
+  
+  
+  
+* 
