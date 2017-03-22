@@ -8,4 +8,6 @@
 
 5. **git reset --hard ORIG_HEAD** to reset back to the original version;
 
-6. 
+6. **git merge --squash issue1** to merge all commits on issue1 branch to one commit and import it to the master branch.
+
+7. 
