@@ -50,3 +50,13 @@ I ****Type of machine learning****
             This whole process is usually done offline (i.e., not on the live system), so online learning can be a confusing name. Think of it as incremental learning.
             A big challenge with online learning is that if bad data is fed to the system, the system’s performance will gradually decline. For example, bad data could come from a malfunctioning sensor on a robot, or from someone spamming a search engine to try to rank high in search results.
             
+            
+7. **Instance-based Learning**
+
+            This is called instance-based learning: the system learns the examples by heart, then generalizes to new cases using a similarity measure. 
+            For spam filters, this requires a measure of similarity between two emails. A (very basic) similarity measure between two emails could be to count the number of words they have in common. The system would flag an email as spam if it has many words in common with a known spam email. 
+            
+8. **Model-based Learning**
+            
+            
+
