@@ -38,3 +38,15 @@ I ****Type of machine learning****
 4. **Reinforcement Learning**
 
             The learning system, called an agent in this context, can observe the environment, select and perform actions, and get rewards in return (or penalties in the form of negative rewards)
+            
+5. **Batch Learning**
+
+             This is also called offline learning, system is not able to learn incrementally, it must be trained using all available data and if you want the system to know about new data, you need to feed the system the full dataset again (old and new data together). 
+             If your system needs to adapt to rapidly changing data (e.g., to predict stock prices), then you need a more reactive solution.
+             
+6. **Online Learning**
+
+            Online learning is great for systems that receive data as a continuous flow (e.g., stock prices) and need to adapt to change rapidly or autonomously.
+            This whole process is usually done offline (i.e., not on the live system), so online learning can be a confusing name. Think of it as incremental learning.
+            A big challenge with online learning is that if bad data is fed to the system, the system’s performance will gradually decline. For example, bad data could come from a malfunctioning sensor on a robot, or from someone spamming a search engine to try to rank high in search results.
+            
