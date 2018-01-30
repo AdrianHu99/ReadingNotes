@@ -56,7 +56,25 @@ I ****Type of machine learning****
             This is called instance-based learning: the system learns the examples by heart, then generalizes to new cases using a similarity measure. 
             For spam filters, this requires a measure of similarity between two emails. A (very basic) similarity measure between two emails could be to count the number of words they have in common. The system would flag an email as spam if it has many words in common with a known spam email. 
             
-8. **Model-based Learning**
+8. **Model-based Learning**  
+
+            This is called model-based learning, which is to generalize from a set of examples is to build a model of these examples, then use that model to make predictions.
             
-            
+
+II ****Main Challenges****
+
+1. **Insufficient Quantity of Training Data**
+2. **Nonrepresentative Training Data**: training data should be reperesentative enough for new cases
+3. **Poor-Quality Data**: errors, outliers, noise
+4. **Irrelevant Features**
+5. **Overfitting the Training Data**: W-satisfaction rule
+6. **Underfitting the Training Data**
+
+
+III ****Testing and Validating****
+
+1. It is common to use 80% of the data for training and hold out 20% for testing.
+2. The error rate on new cases is called the generalization error (or out-of-sample error).
+3. To avoid “wasting” too much training data in validation sets, a common technique is to use crossvalidation: the training set is split into complementary subsets, and each model is trained against a different combination of these subsets and validated against the remaining parts. Once the model type and hyperparameters have been selected, a final model is trained using these hyperparameters on the full training set, and the generalized error is measured on the test set.
+
 
