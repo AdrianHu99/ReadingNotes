@@ -13,11 +13,11 @@ http://www.infoq.com/cn/minibooks/architect-201810?utm_source=minibooks_about_ar
 高效了解在JAVA堆上都进行了哪些对象分配，是诊断内存问题的基本出发点之一。
 
 
-3. KVS 数据库  ANNA 1.0
-http://db.cs.berkeley.edu/jmh/papers/anna_ieee18.pdf
-https://zhuanlan.zhihu.com/p/34603927
-https://github.com/fluent-project/fluent/tree/master/kvs
-https://arxiv.org/pdf/1809.00089.pdf
+3. KVS 数据库  ANNA 1.0  
+http://db.cs.berkeley.edu/jmh/papers/anna_ieee18.pdf  
+https://zhuanlan.zhihu.com/p/34603927  
+https://github.com/fluent-project/fluent/tree/master/kvs  
+https://arxiv.org/pdf/1809.00089.pdf  
 
 4. !!!架构师如何判断技术演进的方向
 基于业务发展阶段进行判断，这也是为什么架构师必须具备业务理解能力的原因。不同的行业业务发展路径、轨迹、模式不一样，架构师必须能够基于行业发展和企业自身
