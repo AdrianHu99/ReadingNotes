@@ -2,7 +2,8 @@ http://www.infoq.com/cn/minibooks/architect-201810?utm_source=minibooks_about_ar
 
 
 
-1. JEP 328: Flight Recorder(JFR) - JFR 是一套集成进入JDK和JVM内部的事件机制框架，通过良好的架构和设计的框架，硬件层面的极致优化，生产环境的广泛验证，
+1. JEP 328: Flight Recorder(JFR)   
+JFR 是一套集成进入JDK和JVM内部的事件机制框架，通过良好的架构和设计的框架，硬件层面的极致优化，生产环境的广泛验证，
 它可以做到极致的可靠和低开销。
 我们可以随时主动开启JFR 进行特定诊断，也可以让系统长期运行JFR。
     - 对锁竞争、阻塞、延迟，JVM GC、SafePoint等领域，进行细粒度分析；
@@ -19,11 +20,11 @@ https://zhuanlan.zhihu.com/p/34603927
 https://github.com/fluent-project/fluent/tree/master/kvs  
 https://arxiv.org/pdf/1809.00089.pdf  
 
-4. !!!架构师如何判断技术演进的方向
+4. !!!架构师如何判断技术演进的方向  
 基于业务发展阶段进行判断，这也是为什么架构师必须具备业务理解能力的原因。不同的行业业务发展路径、轨迹、模式不一样，架构师必须能够基于行业发展和企业自身
 情况做出准确判断。
 
-5. Kubernetes
+5. Kubernetes  
 设计不应针对故障，而应该针对恢复
 
 
