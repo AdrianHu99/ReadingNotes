@@ -9,3 +9,5 @@
 
 **工程师的影响力**
 1. CODE WINS ARGUMENTS
+
+高度内聚  松散耦合
