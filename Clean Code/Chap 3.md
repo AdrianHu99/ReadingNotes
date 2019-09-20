@@ -9,3 +9,4 @@
 
     public String format(String format, Object… args);
     void monad(Integer… args);
+test
